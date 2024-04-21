@@ -28,7 +28,6 @@ message = "123";
 console.log(typeof message);
 message = message;
 console.log(message);
-console.log("-----");
 
 //Create a string variable and try changing its type.
 let num3, num4;
@@ -40,9 +39,10 @@ console.log(num3 % num4);
 let counter = 0;
 counter += 1; //method 1
 console.log(counter);
+console.log("2nd method");
 counter++; //mehtod 2
 console.log(counter);
-console.log("-----");
+
 let i = true,
   j = false,
   k = true;
@@ -51,13 +51,97 @@ console.log(!(i || j || k)); //bitwise Not
 console.log(i && j && k); //bitwise AND
 console.log(num1 && num2); //compare left and right expression
 
-console.log("2nd paragraph");
-let n1 = 3,
-  n2 = 2;
-console.log(n1 == n2); //compares values for equality after performing type conversions
-console.log(n1 === n2); //compares without conversion (Strict equality)
-console.log(n1 != n2); //inequality
-console.log(n1 > n2);
-console.log(n1 < n2);
-console.log(n1 <= n2);
-console.log(n1 >= n2);
+//Show examples of using compound assignment operators.
+let num: number = 10;
+num += 5;
+console.log(num);
+num -= 5;
+console.log(num);
+num *= 5;
+console.log(num);
+num /= 5;
+console.log(num);
+
+//Write a program to check if a number is even or odd.
+let numb;
+numb = 7;
+if (numb % 2 == 0) {
+  console.log(numb + " is even");
+} else {
+  console.log(numb + " is odd");
+}
+
+// Check if a person is eligible to vote.
+let age;
+age = 32;
+if (age >= 18) {
+  console.log("You are eligible to vote.");
+} else {
+  console.log("You are not eligible to vote.");
+}
+
+//Assign a grade based on a numerical score.
+let score = 85;
+
+if (score >= 90) {
+  console.log("Grade: A");
+} else if (score >= 80) {
+  console.log("Grade: B");
+} else if (score >= 70) {
+  console.log("Grade: C");
+} else if (score >= 60) {
+  console.log("Grade: D");
+} else {
+  console.log("Grade: F");
+}
+
+//Find the maximum of three numbers
+let x = 10;
+let y = 20;
+let z = 30;
+
+let Maximum = Math.max(x, y, z);
+console.log("The largest number is: " + Maximum);
+
+//Check if a given year is a leap year.
+let year = 2024;
+if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+  console.log(year + " is a leap year");
+} else {
+  console.log(year + " is not a leap year");
+}
+//Write a program that converts temperature from Fahrenheit to Celsius
+let fahrenheit = 100;
+
+let celsius = ((fahrenheit - 32) * 5) / 9;
+
+console.log(
+  fahrenheit +
+    " degrees Fahrenheit is equal to " +
+    celsius +
+    " degrees Celsius."
+);
+//Check if a number is positive, negative, or zero.
+let number = 10;
+
+function getSign(num: number): string {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+console.log("The number " + number + " is " + getSign(number) + ".");
+console.log("2nd solution");
+let number1 = 10;
+
+if (number1 > 0) {
+  console.log("The number " + number1 + " is positive.");
+} else if (number1 < 0) {
+  console.log("The number " + number1 + " is negative.");
+} else {
+  console.log("The number " + number1 + " is zero.");
+}
+// Write a program that prints the multiplication table of a given number up to 10.
+let digit = 5; // You can change this value
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${digit} * ${i} = ${digit * i}`);
+}
